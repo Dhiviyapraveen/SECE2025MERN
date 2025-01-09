@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{   
+            margin:150px 500px;
+            padding:50px;         
+        }
+        form{
+            padding:50px;
+            background-color: aquamarine;
+            width: 200px;
+            height:10vh;
+        }
+    </style>
+</head>
+<body>
+<div>
+<form>
+    Email:<input type="text"/><br>
+    Password:<input type="password"/><br>
+    <input type="submit" onclick="redirect()">
+</form>
+</div>
+<script>
+    function redirect() {
+   var c= document.getElementsByTagName("input");
+   event.preventDefault();
+   if(c[0].value && c[1].value){
+    window.location.href = "add.html";
+   }
+}
+</script>
+</body>
+</html>

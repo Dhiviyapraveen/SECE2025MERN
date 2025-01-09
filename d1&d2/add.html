@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>10</h1>
+    <h1>20</h1>
+    <h1>30</h1>
+    <input type="text" value="5"/>
+    <input type="text" value="5"/>
+<script>
+    var a=document.getElementsByTagName("h1");
+    var sum=0;
+    a[0].innerHTML=100;
+    for(i=0;i<a.length;i++){
+        sum+=parseInt(a[i].innerHTML);
+    }
+    console.log(a);
+    a=document.getElementsByTagName("input");
+    for(i=0;i<a.length;i++){
+        sum+=parseInt(a[i].value);
+    }
+    console.log(a);
+    console.log(sum);
+    for(i=0;i<a.length;i++){
+        a[i].value=sum;
+    }
+    a=document.getElementsByTagName("h1");
+    for(i=0;i<a.length;i++){
+        a[i].innerHTML=sum;
+    }
+
+</script>
+
+</body>
+</html>
