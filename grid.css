@@ -1,0 +1,34 @@
+.grid-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    padding:50px;
+    border:2px blueviolet solid;
+    background-color: bisque;
+}
+#grid-item{
+    padding: 30px;
+    margin:10px;
+    width:20px;
+    height:20px;
+    background-color: aquamarine;
+    color:black;
+    border:1px black dotted;
+}
+@media screen and (max-width:600px){
+    .grid-container{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        padding:10px;
+        border:3px blueviolet solid;
+        background-color: rgb(205, 196, 255);
+    }
+}
+@media screen and (min-width:1600px){
+    .grid-container{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        padding:10px;
+        border:3px rgb(44, 227, 227) solid;
+        background-color: rgb(64, 31, 126);
+    }
+}
