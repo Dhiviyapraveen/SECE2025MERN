@@ -1,7 +1,24 @@
-
-//with arg and with return 
-function sece(dept){
-    console.log(dept)
-    return "section of the department is A"//if this is hided then it will print undefined 
+//with parameter and with return
+function SECE(dept){
+    return "Section of the department is A";
 }
-console.log(sece("cse"))
+console.log(SECE("cse"));
+
+//with parameter and without return
+function SECE2025(dept){
+    console.log("The dept is : ",dept);
+}
+SECE("cse");
+
+//without parameter and with return
+function Add(){
+    return "Addion";
+}
+console.log(Add());
+
+//without parameter and without return
+function sub(){
+    console.log("Subtraction");
+
+}
+sub();
