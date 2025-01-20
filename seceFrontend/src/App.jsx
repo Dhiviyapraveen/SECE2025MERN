@@ -9,6 +9,7 @@ import Img from './components/FunctionaComponents/img'
 import Content from './components/FunctionaComponents/content'
 import ClassComponent from './components/classComponents/ClassComponent'
 import Gallery from './components/FunctionaComponents/Gallery'
+import Contact from './components/FunctionaComponents/Contact'
 
 function App() {
   
@@ -21,7 +22,8 @@ function App() {
       <Img/>
       <Content/>
       <ClassComponent/>
-      <Gallery/>
+      <Gallery image="sece logo" page="secelogo"/>
+      <Contact/>
 
       
     </>
