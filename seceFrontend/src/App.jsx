@@ -7,6 +7,9 @@ import Footer from './components/FunctionaComponents/Footer'
 import Sample from './components/FunctionaComponents/sample'
 import Img from './components/FunctionaComponents/img'
 import Content from './components/FunctionaComponents/content'
+import ClassComponent from './components/classComponents/ClassComponent'
+import Gallery from './components/FunctionaComponents/Gallery'
+
 function App() {
   
 
@@ -17,6 +20,8 @@ function App() {
       <Sample/>
       <Img/>
       <Content/>
+      <ClassComponent/>
+      <Gallery/>
 
       
     </>
