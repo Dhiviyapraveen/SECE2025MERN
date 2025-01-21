@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Signup({ onSignup }) {
+function Login({ onLogin }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSignup(username, password); 
+    onLogin(username, password); 
   };
 
   return (
     <div>
-      <h2>Signup</h2>
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
@@ -30,13 +30,13 @@ function Signup({ onSignup }) {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">Signup</button>
+        <button type="submit">Login</button>
       </form>
       <p>
-        Already have an account? <Link to="/">Login here</Link>
+        Don't have an account? <Link to="/signup">Signup here</Link>
       </p>
     </div>
   );
 }
 
-export default Signup;
+export default Login;
