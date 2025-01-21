@@ -1,33 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Home from "./components/FunctionaComponents/Home"
-import Footer from './components/FunctionaComponents/Footer'  
-import Sample from './components/FunctionaComponents/sample'
-import Img from './components/FunctionaComponents/img'
-import Content from './components/FunctionaComponents/content'
-import ClassComponent from './components/classComponents/ClassComponent'
-import Gallery from './components/FunctionaComponents/Gallery'
-import Contact from './components/FunctionaComponents/Contact'
-import About from './components/FunctionaComponents/About'
+import Home from './components/FunctionaComponents/Home';
+import About from './components/FunctionaComponents/About';
+import Gallery from './components/FunctionaComponents/gallery';
+import Contact from './components/FunctionaComponents/Contact';
+import Nav from './components/FunctionaComponents/Nav';
+import Signup from './components/FunctionaComponents/Signup';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
 function App() {
-  
-
   return (
     <>
-      <Home/>
-      <Footer/>
-      <Sample/>
-      <Img/>
-      <Content/>
-      <ClassComponent/>
-      <Gallery image="sece logo" page="secelogo"/>
-      <Contact/>
-      <About/>
-
-      
+    <BrowserRouter>
+    <Nav/>
+    <Routes>
+      <Route path="/" element={<Home />} ></Route>
+      <Route path="/about" element={<About />} ></Route>
+      <Route path="/gallery" element={<Gallery page="Gallery" img ="time"/>} ></Route>
+      <Route path="/contact" element={<Contact />} ></Route>
+      <Route path="/signup" element={<Signup />} ></Route>
+     </Routes>
+    </BrowserRouter>
     </>
   )
 }
