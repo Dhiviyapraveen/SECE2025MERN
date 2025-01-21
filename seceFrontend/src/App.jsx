@@ -10,6 +10,7 @@ import Content from './components/FunctionaComponents/content'
 import ClassComponent from './components/classComponents/ClassComponent'
 import Gallery from './components/FunctionaComponents/Gallery'
 import Contact from './components/FunctionaComponents/Contact'
+import About from './components/FunctionaComponents/About'
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
       <ClassComponent/>
       <Gallery image="sece logo" page="secelogo"/>
       <Contact/>
+      <About/>
 
       
     </>
