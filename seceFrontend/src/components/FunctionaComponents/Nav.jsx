@@ -18,6 +18,7 @@ const Nav = () => {
           <ul>
             <li><Link to='use-state' >useState</Link></li>
             <li><Link to='/use-effect'>UseEffect</Link></li>
+            <li><Link to='/use-api'>UseEffectAPI</Link></li>
           </ul>)}
         </div>
         <li><Link to='/contact'className="link">Contact</Link></li>
