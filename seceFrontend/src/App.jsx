@@ -7,10 +7,14 @@ import Contact from './components/FunctionaComponents/Contact';
 import Nav from './components/FunctionaComponents/Nav';
 import Signup from './components/FunctionaComponents/Signup';
 import Login from './components/FunctionaComponents/Login';
+import UseState from './components/FunctionaComponents/Hooks/UseState';
+import UseEffect from './components/FunctionaComponents/Hooks/UseEffect';
+
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 function App() {
+  
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState({ username: '', password: '' }); 
 
@@ -37,6 +41,8 @@ function App() {
       <Route path="/about" element={<About />} ></Route>
       <Route path="/gallery" element={<Gallery page="Gallery" img ="secelogo"/>} ></Route>
       <Route path="/contact" element={<Contact />} ></Route>
+      <Route path="/use-state" element={<UseState />} ></Route>
+      <Route path="/use-effect" element={<UseEffect/>} ></Route>
      </Routes>
      </>
     ):(
