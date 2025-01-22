@@ -10,6 +10,8 @@ import Login from './components/FunctionaComponents/Login';
 import UseState from './components/FunctionaComponents/Hooks/UseState';
 import UseEffect from './components/FunctionaComponents/Hooks/UseEffect';
 import UseEffectAPI from './components/FunctionaComponents/Hooks/UseEffectAPI';
+import UseReducer from './components/FunctionaComponents/Hooks/UseReduer';
+import UseEffectAPIimage from './components/FunctionaComponents/Hooks/UseEffectAPIimage';
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
@@ -30,6 +32,7 @@ function App() {
       alert('Invalid username or password!');
     }
   };
+  
   return (
     <>
     <BrowserRouter>
@@ -44,6 +47,8 @@ function App() {
       <Route path="/use-state" element={<UseState />} ></Route>
       <Route path="/use-effect" element={<UseEffect/>} ></Route>
       <Route path="/use-api" element={<UseEffectAPI/>} ></Route>
+      <Route path="/use-image" element={<UseEffectAPIimage/>} ></Route>
+      <Route path="/use-reducer" element={<UseReducer/>} ></Route>
      </Routes>
      </>
     ):(

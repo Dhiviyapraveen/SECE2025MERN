@@ -1,5 +1,5 @@
-import React from 'react'
-import {useEffect,useState}from "react";
+import {useEffect,useState}from "react";import React from 'react'
+
 const UseEffect = () => {
    var[text,setText]=useState("");
    useEffect(()=>{
