@@ -66,6 +66,21 @@ const Nav = () => {
                     useAPIimg
                   </Link>
                 </li>
+                <li>
+                  <Link to="/use-ref" className="link">
+                    useRef
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-memo" className="link">
+                    useMemo
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-callback" className="link">
+                    useCallback
+                  </Link>
+                </li>
               </ul>
             )}
           </li>

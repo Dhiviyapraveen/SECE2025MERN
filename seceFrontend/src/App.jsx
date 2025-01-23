@@ -12,6 +12,9 @@ import UseEffect from './components/FunctionaComponents/Hooks/UseEffect';
 import UseEffectAPI from './components/FunctionaComponents/Hooks/UseEffectAPI';
 import UseReducer from './components/FunctionaComponents/Hooks/UseReduer';
 import UseEffectAPIimage from './components/FunctionaComponents/Hooks/UseEffectAPIimage';
+import UseRef from './components/FunctionaComponents/Hooks/UseRef';
+import UseMemo from './components/FunctionaComponents/Hooks/UseMemo';
+import UseCallback from './components/FunctionaComponents/Hooks/UseCallback';
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
@@ -49,6 +52,10 @@ function App() {
       <Route path="/use-api" element={<UseEffectAPI/>} ></Route>
       <Route path="/use-image" element={<UseEffectAPIimage/>} ></Route>
       <Route path="/use-reducer" element={<UseReducer/>} ></Route>
+      <Route path="/use-ref" element={<UseRef/>} ></Route>
+      <Route path="/use-memo" element={<UseMemo/>} ></Route>
+      <Route path="/use-callback" element={<UseCallback/>} ></Route>
+
      </Routes>
      </>
     ):(
