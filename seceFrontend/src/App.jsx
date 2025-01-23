@@ -15,6 +15,7 @@ import UseEffectAPIimage from './components/FunctionaComponents/Hooks/UseEffectA
 import UseRef from './components/FunctionaComponents/Hooks/UseRef';
 import UseMemo from './components/FunctionaComponents/Hooks/UseMemo';
 import UseCallback from './components/FunctionaComponents/Hooks/UseCallback';
+import List from './components/FunctionaComponents/Hooks/List';
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
@@ -55,7 +56,7 @@ function App() {
       <Route path="/use-ref" element={<UseRef/>} ></Route>
       <Route path="/use-memo" element={<UseMemo/>} ></Route>
       <Route path="/use-callback" element={<UseCallback/>} ></Route>
-
+     
      </Routes>
      </>
     ):(
