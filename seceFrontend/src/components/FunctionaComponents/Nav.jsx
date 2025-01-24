@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom'
 import "./Nav.css";
 
 const Nav = () => {
-  const [dropDown, setDropdown] = useState(false);
+  const [mdropDown, setmDropdown] = useState(false);
+  const [hdropDown, sethDropdown] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdown((prevState) => !prevState);
+  const togglemDropdown = () => {
+    setmDropdown((prevState) => !prevState);
+  };
+  const togglehDropdown = () => {
+    sethDropdown((prevState) => !prevState);
   };
 
   return (
@@ -42,11 +46,11 @@ const Nav = () => {
 
           <li
             className="dropdown"
-            onMouseEnter={toggleDropdown}
-            onMouseLeave={toggleDropdown}
+            onMouseEnter={togglehDropdown}
+            onMouseLeave={togglehDropdown}
           >
             <span className="link">Hooks</span>
-            {dropDown && (
+            {hdropDown && (
               <ul className="dropdown-box">
                 <li>
                   <Link to="/use-state" className="link">
@@ -95,12 +99,32 @@ const Nav = () => {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/classcomponent" className="link">
+                    Class-compo
+                  </Link>
+                </li>
+                <li>
                   <Link to="/use-context" className="link">
                     useContext
                   </Link>
                 </li>
 
               </ul>
+            )}
+          </li>
+          <li
+            className="dropdown"
+            onMouseEnter={togglemDropdown}
+            onMouseLeave={togglemDropdown}
+          >
+            <span className="link">Memoization</span>
+            {mdropDown && (
+              <ul className="dropdown-box">
+                <li>
+                  <Link to="/memo" className="link">
+                    memo
+                  </Link>
+                </li></ul>
             )}
           </li>
         </ol>

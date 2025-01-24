@@ -19,7 +19,7 @@ import List from './components/FunctionaComponents/Hooks/List';
 import ReactLifecycleMethods from './components/classComponents/ReactLifecycleMethods';
 import UseContext from './components/FunctionaComponents/Hooks/UseContext';
 import Memo from './components/FunctionaComponents/Memoization/Memo'
-
+import ClassComponent from './components/classComponents/ClassComponent';
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
@@ -63,7 +63,7 @@ function App() {
       <Route path="/use-callback" element={<UseCallback/>} ></Route>
       <Route path="/use-context" element={<UseContext/>} ></Route>
       <Route path="/memo" element={<Memo/>} ></Route>
-      
+      <Route path="/classcomponent" element={<ClassComponent/>} ></Route>
       
      </Routes>
      </>

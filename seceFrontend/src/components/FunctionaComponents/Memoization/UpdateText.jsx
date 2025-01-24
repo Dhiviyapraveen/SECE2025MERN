@@ -10,4 +10,4 @@ const UpdateText = ({value}) => {
   )
 }
 
-export default memo(UpdateText);
+export default memo(UpdateText); 
