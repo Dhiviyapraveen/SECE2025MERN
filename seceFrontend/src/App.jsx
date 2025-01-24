@@ -17,9 +17,12 @@ import UseMemo from './components/FunctionaComponents/Hooks/UseMemo';
 import UseCallback from './components/FunctionaComponents/Hooks/UseCallback';
 import List from './components/FunctionaComponents/Hooks/List';
 import ReactLifecycleMethods from './components/classComponents/ReactLifecycleMethods';
+import UseContext from './components/FunctionaComponents/Hooks/UseContext';
+import Memo from './components/FunctionaComponents/Memoization/Memo'
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+
 function App() {
   
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -58,6 +61,9 @@ function App() {
       <Route path="/use-ref" element={<UseRef/>} ></Route>
       <Route path="/use-memo" element={<UseMemo/>} ></Route>
       <Route path="/use-callback" element={<UseCallback/>} ></Route>
+      <Route path="/use-context" element={<UseContext/>} ></Route>
+      <Route path="/memo" element={<Memo/>} ></Route>
+      
       
      </Routes>
      </>

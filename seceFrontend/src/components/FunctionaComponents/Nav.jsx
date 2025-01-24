@@ -1,5 +1,5 @@
-import {useState} from 'react'
-import {Link} from 'react-router-dom'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./Nav.css";
 
 const Nav = () => {
@@ -33,7 +33,13 @@ const Nav = () => {
               Contact
             </Link>
           </li>
-          
+          <li>
+            <Link to="/memo" className="link">
+             Memo
+            </Link>
+          </li>
+
+
           <li
             className="dropdown"
             onMouseEnter={toggleDropdown}
@@ -84,11 +90,16 @@ const Nav = () => {
 
                 </li>
                 <li>
-            <Link to="/react-lifecyclemethods" className="link">
-             Lifecycle
-            </Link>
-          </li>
-               
+                  <Link to="/react-lifecyclemethods" className="link">
+                    Lifecycle
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/use-context" className="link">
+                    useContext
+                  </Link>
+                </li>
+
               </ul>
             )}
           </li>
