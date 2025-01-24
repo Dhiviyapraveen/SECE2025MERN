@@ -16,6 +16,7 @@ import UseRef from './components/FunctionaComponents/Hooks/UseRef';
 import UseMemo from './components/FunctionaComponents/Hooks/UseMemo';
 import UseCallback from './components/FunctionaComponents/Hooks/UseCallback';
 import List from './components/FunctionaComponents/Hooks/List';
+import ReactLifecycleMethods from './components/classComponents/ReactLifecycleMethods';
 
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
@@ -48,6 +49,7 @@ function App() {
       <Route path="/about" element={<About />} ></Route>
       <Route path="/gallery" element={<Gallery page="Gallery" img ="secelogo"/>} ></Route>
       <Route path="/contact" element={<Contact />} ></Route>
+      <Route path="/react-lifecyclemethods" element={<ReactLifecycleMethods/>} ></Route> 
       <Route path="/use-state" element={<UseState />} ></Route>
       <Route path="/use-effect" element={<UseEffect/>} ></Route>
       <Route path="/use-api" element={<UseEffectAPI/>} ></Route>
@@ -56,7 +58,7 @@ function App() {
       <Route path="/use-ref" element={<UseRef/>} ></Route>
       <Route path="/use-memo" element={<UseMemo/>} ></Route>
       <Route path="/use-callback" element={<UseCallback/>} ></Route>
-     
+      
      </Routes>
      </>
     ):(

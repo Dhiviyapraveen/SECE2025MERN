@@ -33,6 +33,7 @@ const Nav = () => {
               Contact
             </Link>
           </li>
+          
           <li
             className="dropdown"
             onMouseEnter={toggleDropdown}
@@ -80,7 +81,13 @@ const Nav = () => {
                   <Link to="/use-callback" className="link">
                     useCallback
                   </Link>
+
                 </li>
+                <li>
+            <Link to="/react-lifecyclemethods" className="link">
+             Lifecycle
+            </Link>
+          </li>
                
               </ul>
             )}
