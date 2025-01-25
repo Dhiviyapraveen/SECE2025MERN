@@ -37,11 +37,6 @@ const Nav = () => {
               Contact
             </Link>
           </li>
-          <li>
-            <Link to="/memo" className="link">
-             Memo
-            </Link>
-          </li>
 
 
           <li
@@ -108,6 +103,21 @@ const Nav = () => {
                     useContext
                   </Link>
                 </li>
+                <li>
+                  <Link to="/custom-hooks" className="link">
+                    Custom-hooks
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/local-storage" className="link">
+                    Local-storage
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/hoc" className="link">
+                   Hoc
+                  </Link>
+                </li>
 
               </ul>
             )}
@@ -124,7 +134,13 @@ const Nav = () => {
                   <Link to="/memo" className="link">
                     memo
                   </Link>
-                </li></ul>
+                </li>
+                <li>
+                  <Link to="/lazy-suspense" className="link">
+                    Lazy-suspense
+                  </Link>
+                </li>
+                </ul>
             )}
           </li>
         </ol>

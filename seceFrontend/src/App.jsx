@@ -20,9 +20,11 @@ import ReactLifecycleMethods from './components/classComponents/ReactLifecycleMe
 import UseContext from './components/FunctionaComponents/Hooks/UseContext';
 import Memo from './components/FunctionaComponents/Memoization/Memo'
 import ClassComponent from './components/classComponents/ClassComponent';
-
+import LazyLoadingWithSuspense from './components/FunctionaComponents/Memoization/LazyLoadingWithSuspense';
+import SampleCustomHooks from './components/FunctionaComponents/Hooks/CustomHooks/SampleCustomHooks';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
-
+import UseLocalStorage from './components/FunctionaComponents/Hooks/CustomHooks/UseLocalStorage';
+import HoC from './components/FunctionaComponents/Hoc/HoC';
 function App() {
   
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -64,6 +66,10 @@ function App() {
       <Route path="/use-context" element={<UseContext/>} ></Route>
       <Route path="/memo" element={<Memo/>} ></Route>
       <Route path="/classcomponent" element={<ClassComponent/>} ></Route>
+      <Route path="/lazy-suspense" element={<LazyLoadingWithSuspense/>} ></Route>
+      <Route path="/custom-hooks" element={<SampleCustomHooks/>} ></Route>
+      <Route path="/local-storage" element={<UseLocalStorage/>} ></Route>
+      <Route path="/hoc" element={<HoC/>} ></Route>
       
      </Routes>
      </>
