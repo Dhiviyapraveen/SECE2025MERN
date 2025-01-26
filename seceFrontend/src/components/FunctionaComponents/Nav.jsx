@@ -118,6 +118,11 @@ const Nav = () => {
                    Hoc
                   </Link>
                 </li>
+                <li>
+                  <Link to="/darkmodetoggle" className="link">
+                   DarkModeToggle
+                  </Link>
+                </li>
 
               </ul>
             )}

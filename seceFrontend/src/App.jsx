@@ -25,6 +25,8 @@ import SampleCustomHooks from './components/FunctionaComponents/Hooks/CustomHook
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import UseLocalStorage from './components/FunctionaComponents/Hooks/CustomHooks/UseLocalStorage';
 import HoC from './components/FunctionaComponents/Hoc/HoC';
+import DarkModeToggle from './components/FunctionaComponents/Hooks/CustomHooks/DarkModeToggle';
+
 function App() {
   
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -70,6 +72,8 @@ function App() {
       <Route path="/custom-hooks" element={<SampleCustomHooks/>} ></Route>
       <Route path="/local-storage" element={<UseLocalStorage/>} ></Route>
       <Route path="/hoc" element={<HoC/>} ></Route>
+      <Route path="/darkmodetoggle" element={<DarkModeToggle/>} ></Route>
+      
       
      </Routes>
      </>
