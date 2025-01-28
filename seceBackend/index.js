@@ -3,9 +3,11 @@ const path = require('path');
 const mdb = require('mongoose');
 const dotenv = require('dotenv');
 const Signup = require("./models/signupSchema");
+const bcrypt = require('bcrypt');
+const cors = require('cors');
 const app = express();
 dotenv.config();
-
+app.use(cors())
 app.use(express.json());
 
 mdb.connect(process.env.MONGODB_URL)
@@ -24,9 +26,11 @@ app.get('/static', (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// Signup Route
-app.post('/signup', (req, res) => {
+
+app.post('/signup', async(req, res) => {
   var { firstname, lastname, username, email, password } = req.body;
+  var hashedPassword=await bcrypt.hash(password,15);
+  console.log(hashedPassword)
   try {
     console.log("inside try");
     const newCustomer = new Signup({
@@ -34,38 +38,37 @@ app.post('/signup', (req, res) => {
       lastname: lastname,
       username: username,
       email: email,
-      password: password,
+      password: hashedPassword,
     });
 
     console.log(newCustomer);
     newCustomer.save();
-    res.status(201).send("Signup successful");
+    res.status(201).json({response:"Signup successful",signupStatus:true});
   } catch (err) {
     res.status(400).send("Signup unsuccessful", err);
   }
 });
 
-// Login Route
+
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
     const user = await Signup.findOne({ email: email });
     if (!user) {
-      return res.status(404).send("User not found");
+      return res.status(404).send({response:"User not found",loginStatus:false});
     }
 
-    if (user.password === password) {
-      res.status(200).send("Login successful");
+    if (bcrypt.compare(user.password , password)) {
+      res.status(200).send({response:"Login successful",loginStatus:true});
     } else {
-      res.status(401).send("Incorrect password");
+      res.status(401).send({response:"Incorrect password",loginStatus:false});
     }
   } catch (err) {
     res.status(500).send("Error during login");
-  }
+  }
 });
 
-// Get Signup Details Route
 app.get('/getsignupdet', async (req, res) => {
   try {
     const signUpdet = await Signup.find();
@@ -74,29 +77,25 @@ app.get('/getsignupdet', async (req, res) => {
     res.status(500).send("Error fetching signup details");
   }
 });
-// Update User Details Route
+
 app.put('/updateuser', async (req, res) => {
-    const { id, ...updates } = req.body; // Extract id and update fields
-  
-    try {
-      const updatedUser = await Signup.findByIdAndUpdate(id, updates, { new: true });
-      if (!updatedUser) {
-        return res.status(404).send("User not found");
-      }
-      res.status(200).send("User details updated successfully");
-    } catch (err) {
-      res.status(500).send("Error updating user details");
-    }
+    var updateRec=await Signup.findOneAndUpdate(
+        { firstname:"bavanetha"},
+        {$set:{firstname:"Joanna"}}
+    )
+    console.log(updateRec)
+     updateRec.save()
+    res.json("Updated Record");
   });
   
   
-  // Delete User Route
+
   app.delete('/deleteuser', async (req, res) => {
-    const { id } = req.body; // Extract id from request body
+    const { id } = req.body; 
   
     try {
       const deletedUser = await Signup.findByIdAndDelete(id);
-      if (!deletedUser) {
+      if (!deletedUser) { 
         return res.status(404).send("User not found");
       }
       res.status(200).send("User deleted successfully");

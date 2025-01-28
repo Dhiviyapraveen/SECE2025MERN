@@ -28,7 +28,7 @@ import HoC from './components/FunctionaComponents/Hoc/HoC';
 import DarkModeToggle from './components/FunctionaComponents/Hooks/CustomHooks/DarkModeToggle';
 
 function App() {
-  
+  /*
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState({ username: '', password: '' }); 
 
@@ -38,51 +38,22 @@ function App() {
   };
 
   const handleLogin = (username, password) => {
-    if (username === user.username && password === user.password) {
+    
       setIsAuthenticated(true);
-    } else {
-      alert('Invalid username or password!');
-    }
-  };
+   
+  };*/
   
   return (
     <>
     <BrowserRouter>
-    {isAuthenticated ?(
-      <>
-    <Nav/>
+   
     <Routes>
-      <Route path="/" element={<Home />} ></Route>
-      <Route path="/about" element={<About />} ></Route>
-      <Route path="/gallery" element={<Gallery page="Gallery" img ="secelogo"/>} ></Route>
-      <Route path="/contact" element={<Contact />} ></Route>
-      <Route path="/react-lifecyclemethods" element={<ReactLifecycleMethods/>} ></Route> 
-      <Route path="/use-state" element={<UseState />} ></Route>
-      <Route path="/use-effect" element={<UseEffect/>} ></Route>
-      <Route path="/use-api" element={<UseEffectAPI/>} ></Route>
-      <Route path="/use-image" element={<UseEffectAPIimage/>} ></Route>
-      <Route path="/use-reducer" element={<UseReducer/>} ></Route>
-      <Route path="/use-ref" element={<UseRef/>} ></Route>
-      <Route path="/use-memo" element={<UseMemo/>} ></Route>
-      <Route path="/use-callback" element={<UseCallback/>} ></Route>
-      <Route path="/use-context" element={<UseContext/>} ></Route>
-      <Route path="/memo" element={<Memo/>} ></Route>
-      <Route path="/classcomponent" element={<ClassComponent/>} ></Route>
-      <Route path="/lazy-suspense" element={<LazyLoadingWithSuspense/>} ></Route>
-      <Route path="/custom-hooks" element={<SampleCustomHooks/>} ></Route>
-      <Route path="/local-storage" element={<UseLocalStorage/>} ></Route>
-      <Route path="/hoc" element={<HoC/>} ></Route>
-      <Route path="/darkmodetoggle" element={<DarkModeToggle/>} ></Route>
-      
-      
-     </Routes>
-     </>
-    ):(
-      <Routes>
-            <Route path="/" element={<Login onLogin={handleLogin} />} />
-            <Route path="/signup" element={<Signup onSignup={handleSignup} />} />
-          </Routes>
-    )}
+     
+            
+            <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Signup />} />
+            <Route path="/home" element={<Home />} />
+        </Routes>
     </BrowserRouter>
     </>
   );

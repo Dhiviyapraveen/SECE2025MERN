@@ -17,8 +17,11 @@ const Nav = () => {
     <header>
       <nav>
         <ol>
+        <li><Link to='/' classname="link">Signup</Link></li>
+        <li><Link to='/login' classname="link">Login</Link></li>
           <li>
-            <Link to="/" className="link">
+           
+            <Link to="/home" className="link">
               Home
             </Link>
           </li>
@@ -47,6 +50,7 @@ const Nav = () => {
             <span className="link">Hooks</span>
             {hdropDown && (
               <ul className="dropdown-box">
+
                 <li>
                   <Link to="/use-state" className="link">
                     useState
